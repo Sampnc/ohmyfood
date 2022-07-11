@@ -1,0 +1,11 @@
+header {
+  font-family: "shrikhand", cursive;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  @include base-shadow;
+}
+
+h1 {
+  margin: 0;
+}

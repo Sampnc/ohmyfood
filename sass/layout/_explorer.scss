@@ -1,0 +1,25 @@
+.explorer {
+	background-color: #fafafa;
+	text-align: center;
+	padding: 30px;
+	& h2 {
+		margin-top: 0;
+	}
+	button {
+	background-image: $gradient;
+	border: 0;
+	font-weight: bold;
+	font-size: 14pt;
+	color: white;
+	border-radius: 100px;
+	height: 45px;
+	width: 270px;
+	margin-top: 20px;
+	@include base-shadow;
+	&:hover {
+		transform: scale(1.02);
+		opacity: 0.9;
+		}
+	}
+
+}
