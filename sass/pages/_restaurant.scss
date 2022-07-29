@@ -36,7 +36,7 @@
 				width: 100%;
 			}
 		}
-		h3 {			
+		h4 {			
 			color: $color-grey;
 			padding-bottom: 10px;
 			position: relative;
@@ -58,8 +58,9 @@
 	width: 100%;
 	position: relative;
 	background-color: white;
-	@include base-shadow;
+	box-shadow: map-get($base-shadow, initial);
 	@include b-radius(15px);
+	@include box-shadow-initial;
 	margin: 15px 0 15px 0;	
 	overflow: hidden;
 	@for $i from 1 through 5 {
@@ -75,7 +76,11 @@
 		@include b-radius(15px);
 		padding: 15px;
 		@include overflow-hidden;
-		h4, p {
+		h5 {
+			margin-bottom: 5px;
+			@include overflow-hidden;
+		}
+		p {
 			@include overflow-hidden;
 		}
 	}

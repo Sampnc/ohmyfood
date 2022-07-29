@@ -13,9 +13,6 @@
 	background-color: $color-lightgrey;
 	text-align: center;
 	padding: 30px;
-	h2 {
-		margin-top: 0;
-	}
 	p {
 		color: $color-grey;
 	}
@@ -40,7 +37,7 @@
 		background-color: $color-lightgrey;
 		padding: 30px;
 		@include b-radius(25px);
-		@include base-shadow;
+		@include box-shadow-initial;
 		@media (max-width: 1024px) {
 			width: 100%;
 			margin-bottom: 20px;
@@ -93,14 +90,14 @@
 	text-decoration: none;
 	color: inherit;
 	@include b-radius(15px);
+	@include box-shadow-initial;
 	background-color: white;
 	height: 300px;
 	width: 590px;
 	margin-bottom: 30px;
 	position: relative;
-	@include base-shadow;
 	&:hover {
-		@include base-shadow-primary;
+		@include box-shadow-color;
 	}
 	@media (max-width: 1024px) {
 		width: 100%;
@@ -132,4 +129,3 @@
 		}
 	}
 }
-

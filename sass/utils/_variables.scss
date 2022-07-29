@@ -10,16 +10,9 @@ $color-darkgrey: #353535;
 $gradient: linear-gradient(-5deg,$color-primary,$color-secondary);
 $gradient-heart: linear-gradient(180deg,$color-primary,$color-secondary);
 
-$margin-none: 0;
 
-$base-shadow: box-shadow 4px 4px 4px rgb(0 0 0 / 13%);
-
-$base-shadow-anime: box-shadow 6px 6px 13px rgb(0 0 0 / 30%);
-
-$base-shadow-primary: box-shadow 0rem 0rem 1rem rgb(147,86,220,0.6);
-
-$box-shadow: (
-	box-shadow-base: box-shadow 4px 4px 4px rgb(0 0 0 / 13%),
-	box-shadow-anime: box-shadow 6px 6px 13px rgb(0 0 0 / 30%),
-	box-shadow-color: box-shadow 6px 6px 13px rgb(0 0 0 / 30%),
+$base-shadow: (
+  initial: 4px 4px 4px rgb(0, 0, 0, 13%),
+  anime: 6px 6px 13px rgb(0, 0, 0, 30%),
+  color: 0rem 0rem 1rem rgb(147,86,220,0.6)
 );

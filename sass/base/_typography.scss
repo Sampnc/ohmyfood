@@ -10,33 +10,36 @@ h1 {
 }
 
 h2 {
-	font-size: 16pt;
-}
-
-h3 {
-	font-size: 13pt;
-	font-weight: bold;
-}
-
-footer h3 {
-		font-family: "shrikhand", cursive;
-}
-
-h4 {
-	font-weight: bold;
-}
-
-.carte__entete__titre {
 	font-family: "shrikhand", cursive;
 	font-size: 18pt;
 }
 
-.carte__contenu__titre {
+h3 {
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+h4 {
+	font-weight: 400;
+	font-size: 18px;
 	text-transform: uppercase;
 }
 
+h5 {
+	font-family: "Roboto", sans-serif;
+	font-size: 17px;
+	margin: 10px;
+}
+
+h6 {
+	font-family: "shrikhand", cursive;
+	font-size: 18px;
+	margin: 0 0 20px 0;
+}
+
+
 span {
-	font-size: 14pt;
+	font-size: 13pt;
 	font-weight: bold;
 }
 
@@ -44,10 +47,13 @@ p {
 	font-size: 12pt;
 }
 
+a {
+	font-weight: 400;
+}
+
 .restaurant--nouveau::after {
 	font-size: 12pt;
 }
-
 
 .plat__prix {
 	font-weight: bold;

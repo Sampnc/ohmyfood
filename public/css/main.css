@@ -148,6 +148,10 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  margin-top: 0;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -158,38 +162,44 @@ h1 {
 }
 
 h2 {
-  font-size: 16pt;
-}
-
-h3 {
-  font-size: 13pt;
-  font-weight: bold;
-}
-
-footer h3 {
-  font-family: "shrikhand", cursive;
-}
-
-h4 {
-  font-weight: bold;
-}
-
-.carte__entete__titre {
   font-family: "shrikhand", cursive;
   font-size: 18pt;
 }
 
-.carte__contenu__titre {
+h3 {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 18px;
   text-transform: uppercase;
 }
 
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  margin: 10px;
+}
+
+h6 {
+  font-family: "shrikhand", cursive;
+  font-size: 18px;
+  margin: 0 0 20px 0;
+}
+
 span {
-  font-size: 14pt;
+  font-size: 13pt;
   font-weight: bold;
 }
 
 p {
   font-size: 12pt;
+}
+
+a {
+  font-weight: 400;
 }
 
 .restaurant--nouveau::after {
@@ -208,8 +218,9 @@ p {
   height: 45px;
   width: 230px;
   border-radius: 100px;
-  margin: 0 auto;
+  margin: 30px 0 0 0;
   transition-duration: 0.25s;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.13);
 }
 .bouton:hover {
   cursor: pointer;
@@ -247,7 +258,6 @@ header {
   text-align: center;
   padding: 15px;
   position: relative;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.13);
 }
 header .retour {
   color: inherit;
@@ -310,9 +320,6 @@ footer i {
   background-color: #F6F6F6;
   text-align: center;
   padding: 30px;
-}
-.explorer h2 {
-  margin-top: 0;
 }
 .explorer p {
   color: #7D7D7D;
@@ -407,15 +414,15 @@ footer i {
   text-decoration: none;
   color: inherit;
   border-radius: 15px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.13);
   background-color: white;
   height: 300px;
   width: 590px;
   margin-bottom: 30px;
   position: relative;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.13);
 }
 .restaurant:hover {
-  box-shadow: 0rem 0rem 1rem rgba(147, 86, 220, 0.6);
+  box-shadow: 0px 0px 16px rgba(147, 86, 220, 0.6);
 }
 @media (max-width: 1024px) {
   .restaurant {
@@ -505,13 +512,13 @@ footer i {
     width: 100%;
   }
 }
-.carte__contenu h3 {
+.carte__contenu h4 {
   color: #7D7D7D;
   padding-bottom: 10px;
   position: relative;
   margin: 5px 0 5px 0;
 }
-.carte__contenu h3::after {
+.carte__contenu h4::after {
   content: "";
   width: 50px;
   height: 3px;
@@ -528,8 +535,8 @@ footer i {
   width: 100%;
   position: relative;
   background-color: white;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.13);
   border-radius: 15px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.13);
   margin: 15px 0 15px 0;
   overflow: hidden;
   animation: slide-top 1s, fade-in 1s ease 0s 1 both;
@@ -562,7 +569,14 @@ footer i {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.plat__description h4, .plat__description p {
+.plat__description h5 {
+  margin-bottom: 5px;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.plat__description p {
   margin: 0;
   overflow: hidden;
   white-space: nowrap;
