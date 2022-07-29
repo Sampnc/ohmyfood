@@ -1,2 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:wght@300;500&family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:wght@300;500&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap');
+
+body {
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+}
+
+h1 {
+	font-family: "shrikhand", cursive;
+}
+
+h2 {
+	font-size: 16pt;
+}
+
+h3 {
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+footer h3 {
+		font-family: "shrikhand", cursive;
+}
+
+h4 {
+	font-weight: bold;
+}
+
+.carte__entete__titre {
+	font-family: "shrikhand", cursive;
+	font-size: 18pt;
+}
+
+.carte__contenu__titre {
+	text-transform: uppercase;
+}
+
+span {
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+p {
+	font-size: 12pt;
+}
+
+.restaurant--nouveau::after {
+	font-size: 12pt;
+}
+
+
+.plat__prix {
+	font-weight: bold;
+}
+
+
+

@@ -1,11 +1,17 @@
 header {
-  font-family: "shrikhand", cursive;
-  text-align: center;
-  padding: 15px;
-  position: relative;
-  @include base-shadow;
+	text-align: center;
+	padding: 15px;
+	position: relative;
+	@include base-shadow;
+		.retour {
+		color: inherit;
+		@include position(absolute, $top: 25px, $left: 100px);
+		&:hover {
+			color: $color-primary;
+			transform: scale(1.05);
+		}
+	}
 }
 
-h1 {
-  margin: 0;
-}
+
+

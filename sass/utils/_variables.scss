@@ -1,14 +1,25 @@
-/* Couleurs */
-
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$color-footer: #353535;
+
+$color-lightgrey: #F6F6F6;
+$color-mediumgrey: #EAEAEA;
+$color-grey: #7D7D7D;
+$color-darkgrey: #353535;
+
 $gradient: linear-gradient(-5deg,$color-primary,$color-secondary);
+$gradient-heart: linear-gradient(180deg,$color-primary,$color-secondary);
 
+$margin-none: 0;
 
-/* Responsive */
+$base-shadow: box-shadow 4px 4px 4px rgb(0 0 0 / 13%);
 
-$breakpoints: (
-  mobile: 599px
+$base-shadow-anime: box-shadow 6px 6px 13px rgb(0 0 0 / 30%);
+
+$base-shadow-primary: box-shadow 0rem 0rem 1rem rgb(147,86,220,0.6);
+
+$box-shadow: (
+	box-shadow-base: box-shadow 4px 4px 4px rgb(0 0 0 / 13%),
+	box-shadow-anime: box-shadow 6px 6px 13px rgb(0 0 0 / 30%),
+	box-shadow-color: box-shadow 6px 6px 13px rgb(0 0 0 / 30%),
 );

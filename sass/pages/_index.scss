@@ -1,0 +1,135 @@
+.localisation {
+	@include flex-row(center);
+	align-items: center;
+	background-color: $color-mediumgrey;
+	color: $color-darkgrey;
+	height: 60px;
+	i {
+		margin-right: 20px;
+	}
+}
+
+.explorer {
+	background-color: $color-lightgrey;
+	text-align: center;
+	padding: 30px;
+	h2 {
+		margin-top: 0;
+	}
+	p {
+		color: $color-grey;
+	}
+}
+
+.tutoriel {
+	padding: 20px 150px;
+	counter-reset: tutoriel_etape;
+	@media (max-width: 1024px) {
+		padding: 20px;
+	}
+	ol {
+		@include flex-row(space-between);
+		flex-wrap: wrap;
+		list-style-type: none;
+		padding-left: 15px;
+		position: relative;
+	}
+	li {
+		width: 320px;
+		position: relative;
+		background-color: $color-lightgrey;
+		padding: 30px;
+		@include b-radius(25px);
+		@include base-shadow;
+		@media (max-width: 1024px) {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		&::before {
+			content: counter(tutoriel_etape);
+			counter-increment: tutoriel_etape;
+			background-color: $color-primary;
+			color: white;
+			@include flex-row(center);
+			align-items: center;
+			width: 25px;
+			height: 25px;
+			border-radius: 100%;
+			@include position(absolute, $left: -15px);	
+		}
+		i {
+			color: $color-grey;
+			margin-right: 20px;
+		}
+		&:hover {
+			cursor: pointer;
+			background-color: lighten($color-primary, 35);
+			i {
+				color: $color-primary;
+			}
+		}
+	}
+}
+
+.restaurants {
+	background-color: $color-lightgrey;
+	padding: 20px 150px 20px 150px;
+	> div {
+		@include flex-row(space-between);
+		flex-wrap: wrap;
+		@media (max-width: 1024px) {
+			max-width: 1024px;
+			@include flex-column(center);
+			flex-flow: nowrap;
+		}
+	}
+	@media (max-width: 1024px) {
+		width: calc(100% - 40px);
+		padding: 0 20px 0 20px;
+	}
+}
+
+.restaurant {
+	text-decoration: none;
+	color: inherit;
+	@include b-radius(15px);
+	background-color: white;
+	height: 300px;
+	width: 590px;
+	margin-bottom: 30px;
+	position: relative;
+	@include base-shadow;
+	&:hover {
+		@include base-shadow-primary;
+	}
+	@media (max-width: 1024px) {
+		width: 100%;
+	}
+	&--nouveau::after {
+		content: "Nouveau";
+		background-color: $color-tertiary;
+		color: darken($color-tertiary, 50);
+		@include position(absolute, $top: 20px, $right: 20px,);
+		margin: 0;
+		padding: 5px 10px;
+	}
+	img {
+		height: 200px;
+		width: 100%;
+		object-fit: cover;
+		border-radius: 15px 15px 0 0;
+	}
+
+	&__description {
+		border-radius: 0 0 15px 15px;
+		padding: 10px;
+		position: relative;
+		h3, p {
+			margin: 10px;
+		}
+		i {
+			@include position(absolute, $top: 40px, $right: 30px,);
+		}
+	}
+}
+
