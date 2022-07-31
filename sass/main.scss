@@ -1,5 +1,4 @@
 @import "./utils/variables";
-@import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/animations";
 @import "./utils/extensions";
@@ -8,6 +7,9 @@
 @import "./base/typography"; 
 
 @import "./components/button";
+@import "./components/coeur-animation";
+@import "./components/loader";
+
 
 @import "./layout/header";
 @import "./layout/nav";

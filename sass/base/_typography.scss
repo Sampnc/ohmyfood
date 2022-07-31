@@ -1,20 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap');
-
 body {
-	font-family: "Roboto", sans-serif;
+	font-family: $font-text;
 	font-weight: 300;
 }
 
 h1 {
-	font-family: "shrikhand", cursive;
+	font-family: $font-logo;
 }
 
 h2 {
-	font-family: "shrikhand", cursive;
+	font-family: $font-logo;
 	font-size: 18pt;
 }
 
-h3 {
+h3, .button {
 	font-size: 16pt;
 	font-weight: bold;
 }
@@ -25,39 +23,39 @@ h4 {
 	text-transform: uppercase;
 }
 
+h4, h6 {
+	font-size: 18px;
+}
+
+
 h5 {
-	font-family: "Roboto", sans-serif;
-	font-size: 17px;
-	margin: 10px;
+	font-size: 16px;
 }
 
 h6 {
-	font-family: "shrikhand", cursive;
+	font-family: $font-logo;
 	font-size: 18px;
-	margin: 0 0 20px 0;
 }
 
 
 span {
-	font-size: 13pt;
 	font-weight: bold;
-}
-
-p {
-	font-size: 12pt;
 }
 
 a {
 	font-weight: 400;
 }
 
-.restaurant--nouveau::after {
+.restaurant--nouveau::after, p, span {
 	font-size: 12pt;
+}
+
+.explorer {
+	text-align: center;
 }
 
 .plat__prix {
 	font-weight: bold;
 }
-
 
 

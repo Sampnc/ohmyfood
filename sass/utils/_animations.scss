@@ -1,32 +1,3 @@
-/*Loader*/
-
-.chargement {
-  background-color: white;
-  height: 100%;
-  @include position(fixed, $top: 0, $right: 0, $bottom: 0, $left: 0);
-  z-index: 1;
-  opacity: 0.8;
-  animation: disappear 200ms 3s forwards;
-  transform-origin: top;
-  &__cercle {
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    @include position(absolute, $top: 0, $right: 0, $bottom: 0, $left: 0);
-    @include border-loader($color-primary, $duration: 2s);
-    &::before{
-      content:"";
-      @include position(absolute, $top: 5px, $right: 5px, $bottom: 5px, $left: 5px);
-      @include border-loader($color-secondary, $duration: 3s);
-    }
-    &::after{
-      content:"";
-      @include position(absolute, $top: 15px, $right: 15px, $bottom: 15px, $left: 15px);
-      @include border-loader($color-tertiary, $duration: 6s);
-    }
-  }
-}
-
 /*Animations Slide*/
 
 @keyframes slide-top {

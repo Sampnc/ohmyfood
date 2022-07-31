@@ -1,10 +1,10 @@
 header {
 	text-align: center;
 	padding: 15px;
-	position: relative;
-	box-shadow: map-get($base-shadow, initial);
+	@include position(relative);
+	@include box-shadow-initial;
 		.retour {
-		color: inherit;
+		
 		@include position(absolute, $top: 25px, $left: 100px);
 		&:hover {
 			color: $color-primary;

@@ -10,9 +10,9 @@ $color-darkgrey: #353535;
 $gradient: linear-gradient(-5deg,$color-primary,$color-secondary);
 $gradient-heart: linear-gradient(180deg,$color-primary,$color-secondary);
 
+$font-logo: 'Shrikhand', cursive; 
+$font-text: 'Roboto', sans-serif;
 
-$base-shadow: (
-  initial: 4px 4px 4px rgb(0, 0, 0, 13%),
-  anime: 6px 6px 13px rgb(0, 0, 0, 30%),
-  color: 0rem 0rem 1rem rgb(147,86,220,0.6)
-);
+$font-size: 18px;
+$font-size: 16px;
+$font-size: 12px;
