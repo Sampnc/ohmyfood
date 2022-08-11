@@ -550,7 +550,7 @@ footer a:hover {
   justify-content: space-between;
   padding: 15px;
 }
-.plat__description > h4 + p {
+.plat__description > h4, .plat__description p {
   margin: 0;
   overflow: hidden;
   white-space: nowrap;

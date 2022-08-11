@@ -67,7 +67,7 @@
 		width: calc(100% - 30px - 30px);
 		@include flex-box($direction: column, $position: space-between);
 		padding: 15px;
-		> h4 + p {
+		> h4, p {
 			@include overflow-hidden;
 		}
 	}
