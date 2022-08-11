@@ -1,61 +1,52 @@
-body {
-	font-family: $font-text;
-	font-weight: 300;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap');
+
+body, html {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
 	font-family: $font-logo;
+	font-weight: 400;
 }
 
 h2 {
-	font-family: $font-logo;
+	font-weight: bold;
 	font-size: 18pt;
 }
 
-h3, .button {
-	font-size: 16pt;
-	font-weight: bold;
+.carte__entete__titre {
+	font-family: $font-logo;
+	font-weight: normal;
+	font-size: 20pt;
 }
 
-h4 {
-	font-weight: 400;
-	font-size: 18px;
+h3 {
+	font-size: 15pt;
+}
+
+.carte__contenu__titre {
+	font-weight: 300;
 	text-transform: uppercase;
 }
 
-h4, h6 {
-	font-size: 18px;
-}
-
-
-h5 {
-	font-size: 16px;
-}
-
-h6 {
-	font-family: $font-logo;
-	font-size: 18px;
-}
-
-
-span {
-	font-weight: bold;
-}
-
-a {
-	font-weight: 400;
-}
-
-.restaurant--nouveau::after, p, span {
-	font-size: 12pt;
+h4 {
+	font-size: 13pt;
 }
 
 .explorer {
 	text-align: center;
 }
 
+p {
+	font-size: 13pt;
+}
+
 .plat__prix {
 	font-weight: bold;
 }
 
-
+.footer__logo {
+	font-family: $font-logo;
+	font-size: 14pt;
+}

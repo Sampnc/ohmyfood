@@ -4,7 +4,7 @@
 	color: white;
 	height: 45px;
 	width: 230px;
-	@include b-radius(100px);
+	border-radius: 100px;
 	margin: 30px 0 0 0;
 	transition-duration: .25s;
 	@include box-shadow-initial;
@@ -13,4 +13,9 @@
 		opacity: 0.8;
 		@include box-shadow-anime;
 	}
+}
+
+.commande{
+	@include flex-box($position: center);
+	padding: 50px 0 50px 0;
 }

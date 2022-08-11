@@ -1,25 +1,12 @@
 *,
-::before,
-::after {
+*:before,
+*:after {
 	box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap');
-
-body, h1 {
+body, h1, h2, h3, h4, h5, span, p {
 	margin: 0;
-}
-
-h2 {
-	margin-top: 0;
-}
-
-h5 {
-	margin: 10px;
-}
-
-h6 {
-	margin: 0 0 20px 0;
+	line-height: 1;
 }
 
 ol, li {
@@ -32,4 +19,23 @@ a {
 
 a, i {
 	color: inherit;
+}
+
+img {
+	width: 100%;
+	object-fit: cover;
+}
+
+h2 {
+	margin: 25px 0;
+}
+
+main {
+	> * {
+		padding: 30px 20px;
+
+		@include desktop {
+			padding: 30px 150px;
+		}
+	}
 }

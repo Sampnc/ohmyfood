@@ -6,30 +6,36 @@
         <link rel="stylesheet" href="css/normalize.css"/>
         <link rel="stylesheet" href="css/main.css"/>
         <script src="https://kit.fontawesome.com/cf430828ad.js" crossorigin="anonymous"></script>        
-        <title>La note enchantée</title>
+        <title>À la française</title>
     </head>
 
     <body>
         <header>
             <a class="retour" href="index.html"><i class="fa-solid fa-arrow-left fa-lg"></i></a>
             <h1>ohmyfood</h1>
-        </header>
+        </header>        
         <div class="banniere">
-            <img src="images/restaurants/restaurant_2.jpg" alt="photo d'un plat du restaurant la note enchantée">
+            <img class="img__restaurant"
+                srcset="../public/images/restaurants/restaurant_3_768w.jpg 768w,
+                        ../public/images/restaurants/restaurant_3_1024w.jpg 1024w,
+                        ../public/images/restaurants/restaurant_3.jpg 3936w"
+                sizes="100vw"
+                src="../images/restaurants/restaurant_3.jpg" 
+                alt="Photo d'un plat du restaurant À la française">
         </div>
         <section class="carte">
             <div class="carte__entete">
-                <h2>La note enchantée</h2>
+                <h2 class="carte__entete__titre">À la française</h2>
                 <i class="fa-regular fa-heart fa-2xl"></i>
                 <i class="fa-regular fa-heart fa-heart--plein fa-2xl"></i>
             </div>
             <div class="carte__contenu">
                 <div>
-                    <h4>Entrées</h4>                        
+                    <h3 class="carte__contenu__titre">Entrées</h3>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Ravioles de foie gras</h5>
-                            <p>Accompagnées de leur crème à la truffe</p>
+                            <h4>Tartare de poulpe acidulé</h4>
+                            <p>Au zests d'orange</p>
                         </div>
                         <div class="plat__prix">
                             25€
@@ -40,8 +46,8 @@
                     </div>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Caviar osciètre</h5>
-                            <p>Sur blini à la farine de blé noir</p>
+                            <h4>Velouté de légumes d'antan</h4>
+                            <p>Carotte, panais, topinambour</p>
                         </div>
                         <div class="plat__prix">
                             35€
@@ -51,36 +57,24 @@
                         </div>                        
                     </div>
                     <div class="plat">
-                        <div class="plat__description">
-                            <h5>Homard et espuma de potiron</h5>
-                            <p>Marinés aux zests d'orange</p>
-                        </div>
-                        <div class="plat__prix">
-                            20€
-                        </div>
-                        <div class="plat__confirme">
-                            <i class="fa-solid fa-circle-check fa-xl"></i>
-                        </div>                        
-                    </div>
-                    <div class="plat">
-                        <div class="plat__description">
-                            <h5>Foie gras de canard cuit entier</h5>
-                            <p>Confiture de figue et pain toasté</p>
-                        </div>
-                        <div class="plat__prix">
-                            35€
-                        </div>
+                            <div class="plat__description">
+                                <h4>Soupe à l'oignon</h4>
+                                <p>Revisitée</p>
+                            </div>
+                            <div class="plat__prix">
+                                20€
+                            </div>
                         <div class="plat__confirme">
                             <i class="fa-solid fa-circle-check fa-xl"></i>
                         </div>                        
                     </div>
                 </div>
                 <div>
-                    <h4>Plats</h4>
+                    <h3 class="carte__contenu__titre">Plats</h3>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Noix de coquilles Saint-Jacques</h5>
-                            <p>Sur lit de purée de céleri-rave</p>
+                            <h4>Coquilles Saint-Jacques</h4>
+                            <p>Accompagnées d'une purée de panais</p>
                         </div>
                         <div class="plat__prix">
                             40€
@@ -91,8 +85,8 @@
                     </div>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Langoustine poêlée</h5>
-                            <p>Purée de patate douce</p>
+                            <h4>Magret de canard</h4>
+                            <p>Et parmentier de pommes de terre</p>
                         </div>
                         <div class="plat__prix">35€</div>
                         <div class="plat__confirme">
@@ -101,8 +95,8 @@
                     </div>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Mijoté de queue de boeuf</h5>
-                            <p>Et riz sauvage aux zests de citron</p>
+                            <h4>Pigeonneau d'Ille-et-Vilaine</h4>
+                            <p>Sur son lit de gnocchis aux légumes</p>
                         </div>
                         <div class="plat__prix">44€</div>
                         <div class="plat__confirme">
@@ -111,23 +105,21 @@
                     </div>
                 </div>
                 <div>
-                    <h4>Desserts</h4>
+                    <h3 class="carte__contenu__titre">Desserts</h3>
                     <div class="plat">
-                        <div class="plat__description">
-                            <h5>Macaron noisette et chocolat</h5>
-                            <p>Glace au caramel brun et sel de Guérande</p>
-                        </div>
-                        <div class="plat__prix">
-                            18€
-                        </div>
+                            <div class="plat__description">
+                                <h4>Pétales de violettes glacés</h4>
+                                <p>Et purée de noisettes</p>
+                            </div>
+                            <div class="plat__prix">18€</div>
                         <div class="plat__confirme">
                             <i class="fa-solid fa-circle-check fa-xl"></i>
                         </div>                      
                     </div>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Baba au rhum revisité</h5>
-                            <p>Avec son coulis de citron</p>
+                            <h4>Fondant au chocolat</h4>
+                            <p>Revisité</p>
                         </div>
                         <div class="plat__prix">
                             22€
@@ -138,8 +130,8 @@
                     </div>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Tarte au citron meringuée</h5>
-                            <p>Destructurée</p>
+                            <h4>Millefeuille croustillant</h4>
+                            <p>Murtilles et pâte d'amande</p>
                         </div>
                         <div class="plat__prix">
                             23€
@@ -155,7 +147,7 @@
             </div>
         </section>       
         <footer>
-                <h6>ohmyfood</h6>
+                <span class="footer__logo">ohmyfood</span>
                 <ul>
                     <li>
                         <a href="#">
@@ -178,6 +170,6 @@
                         <a href="mailto:contact@ohmyfood.com">Contact</a>
                     </li>
                 </ul>
-        </footer>   
+        </footer>  
     </body>
 </html>

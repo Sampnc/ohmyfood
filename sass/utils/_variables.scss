@@ -1,18 +1,26 @@
+$breakpoints: (
+  tablette: 768px,
+  desktop: 1024px,
+);
+
+
+$font-logo: "Shrikhand", cursive;
+$font-text: 'Roboto', sans-serif;
+
+
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
-$color-lightgrey: #F6F6F6;
-$color-mediumgrey: #EAEAEA;
-$color-grey: #7D7D7D;
-$color-darkgrey: #353535;
+$color-nuance: (
+    lightgrey: #F6F6F6,
+    mediumgrey: #EAEAEA,
+    grey: #7D7D7D,
+    darkgrey: #353535,
+);
 
 $gradient: linear-gradient(-5deg,$color-primary,$color-secondary);
 $gradient-heart: linear-gradient(180deg,$color-primary,$color-secondary);
 
-$font-logo: 'Shrikhand', cursive; 
-$font-text: 'Roboto', sans-serif;
 
-$font-size: 18px;
-$font-size: 16px;
-$font-size: 12px;
+

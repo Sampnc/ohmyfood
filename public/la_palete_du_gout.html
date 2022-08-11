@@ -6,30 +6,36 @@
         <link rel="stylesheet" href="css/normalize.css"/>
         <link rel="stylesheet" href="css/main.css"/>
         <script src="https://kit.fontawesome.com/cf430828ad.js" crossorigin="anonymous"></script>        
-        <title>À la française</title>
+        <title>La palette du goût</title>
     </head>
 
     <body>
         <header>
             <a class="retour" href="index.html"><i class="fa-solid fa-arrow-left fa-lg"></i></a>
             <h1>ohmyfood</h1>
-        </header>        
+        </header>
         <div class="banniere">
-            <img src="images/restaurants/restaurant_3.jpg" alt="photo d'un plat du restaurant À la française">
+            <img class="img__restaurant"
+                    srcset="../public/images/restaurants/restaurant_1_768w.jpg 768w,
+                            ../public/images/restaurants/restaurant_1_1024w.jpg 1024w,
+                            ../public/images/restaurants/restaurant_1.jpg 3936w"
+                    sizes="100vw"
+                    src="../images/restaurants/restaurant_1.jpg" 
+                    alt="Photo d'un plat du restaurant La palette du goût">
         </div>
         <section class="carte">
             <div class="carte__entete">
-                <h2>À la française</h2>
+                <h2 class="carte__entete__titre">La palette du goût</h2>
                 <i class="fa-regular fa-heart fa-2xl"></i>
                 <i class="fa-regular fa-heart fa-heart--plein fa-2xl"></i>
             </div>
             <div class="carte__contenu">
                 <div>
-                    <h4>Entrées</h4>                        
+                    <h3 class="carte__contenu__titre">Entrées</h3>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Tartare de poulpe acidulé</h5>
-                            <p>Au zests d'orange</p>
+                            <h4>Fricassée d'escargot</h4>
+                            <p>Au piment d'espelette</p>
                         </div>
                         <div class="plat__prix">
                             25€
@@ -40,8 +46,8 @@
                     </div>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Velouté de légumes d'antan</h5>
-                            <p>Carotte, panais, topinambour</p>
+                            <h4>Foie gras de canard mi-cuit</h4>
+                            <p>Et ses copeaux de truffe noire</p>
                         </div>
                         <div class="plat__prix">
                             35€
@@ -51,24 +57,24 @@
                         </div>                        
                     </div>
                     <div class="plat">
-                            <div class="plat__description">
-                                <h5>Soupe à l'oignon</h5>
-                                <p>Revisitée</p>
-                            </div>
-                            <div class="plat__prix">
-                                20€
-                            </div>
+                        <div class="plat__description">
+                            <h4>Oeuf au plat</h4>
+                            <p>Assaisonné à la truffe sur lit de poireaux</p>
+                        </div>
+                        <div class="plat__prix">
+                            20€
+                        </div>
                         <div class="plat__confirme">
                             <i class="fa-solid fa-circle-check fa-xl"></i>
                         </div>                        
                     </div>
                 </div>
                 <div>
-                    <h4>Plats</h4>
+                    <h3 class="carte__contenu__titre">Plats</h3>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Coquilles Saint-Jacques</h5>
-                            <p>Accompagnées d'une purée de panais</p>
+                            <h4>Filet de boeuf aux herbes</h4>
+                            <p>Accompagné de sa ribambelle de légumes</p>
                         </div>
                         <div class="plat__prix">
                             40€
@@ -79,18 +85,20 @@
                     </div>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Magret de canard</h5>
-                            <p>Et parmentier de pommes de terre</p>
+                            <h4>Parmentier de queue de boeuf</h4>
+                            <p>A la truffe noire sur sa purée de panais</p>
                         </div>
-                        <div class="plat__prix">35€</div>
+                        <div class="plat__prix">
+                            35€
+                        </div>
                         <div class="plat__confirme">
                             <i class="fa-solid fa-circle-check fa-xl"></i>
                         </div>                        
                     </div>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Pigeonneau d'Ille-et-Vilaine</h5>
-                            <p>Sur son lit de gnocchis aux légumes</p>
+                            <h4>Filet de Turbot</h4>
+                            <p>Aux agrumes</p>
                         </div>
                         <div class="plat__prix">44€</div>
                         <div class="plat__confirme">
@@ -99,11 +107,11 @@
                     </div>
                 </div>
                 <div>
-                    <h4>Desserts</h4>
+                    <h3 class="carte__contenu__titre">Desserts</h3>
                     <div class="plat">
                             <div class="plat__description">
-                                <h5>Pétales de violettes glacés</h5>
-                                <p>Et purée de noisettes</p>
+                                <h4>Paris-Brest</h4>
+                                <p>Revisité</p>
                             </div>
                             <div class="plat__prix">18€</div>
                         <div class="plat__confirme">
@@ -112,8 +120,8 @@
                     </div>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Fondant au chocolat</h5>
-                            <p>Revisité</p>
+                            <h4>Macaron au chocolat d'exception</h4>
+                            <p>Et glace à la vanille de Madagascar</p>
                         </div>
                         <div class="plat__prix">
                             22€
@@ -124,8 +132,8 @@
                     </div>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Millefeuille croustillant</h5>
-                            <p>Murtilles et pâte d'amande</p>
+                            <h4>Mousse au chocolat</h4>
+                            <p>Au piment d'espelette et à la truffe noire</p>
                         </div>
                         <div class="plat__prix">
                             23€
@@ -141,7 +149,7 @@
             </div>
         </section>       
         <footer>
-                <h6>ohmyfood</h6>
+                <span class="footer__logo">ohmyfood</span>
                 <ul>
                     <li>
                         <a href="#">

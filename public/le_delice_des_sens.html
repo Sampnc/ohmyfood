@@ -14,20 +14,26 @@
             <h1>ohmyfood</h1>
         </header>
         <div class="banniere">
-                <img src="images/restaurants/restaurant_4.jpg" alt="photo d'un plat du restaurant Le délice des anges">
+                <img class="img__restaurant"
+                srcset="../public/images/restaurants/restaurant_4_768w.jpg 768w,
+                        ../public/images/restaurants/restaurant_4_1024w.jpg 1024w,
+                        ../public/images/restaurants/restaurant_4.jpg 3936w"
+                sizes="100vw"
+                src="../images/restaurants/restaurant_4.jpg" 
+                alt="Photo d'un plat du restaurant Le délice des sens">
         </div>
         <section class="carte">
             <div class="carte__entete">
-                <h2>Le délice des sens</h2>
+                <h2 class="carte__entete__titre">Le délice des sens</h2>
                 <i class="fa-regular fa-heart fa-2xl"></i>
                 <i class="fa-regular fa-heart fa-heart--plein fa-2xl"></i>
             </div>
             <div class="carte__contenu">
                 <div>
-                    <h4>Entrées</h4>                      
-                    <div class="plat">
+                    <h3 class="carte__contenu__titre">Entrées</h3>
+                        <div class="plat">
                         <div class="plat__description">
-                            <h5>Tartare de thon</h5>
+                            <h4>Tartare de thon</h4>
                             <p>Assaisonné au yuzu</p>
                         </div>
                         <div class="plat__prix">
@@ -39,7 +45,7 @@
                     </div>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Bouchée de homard croustillant</h5>
+                            <h4>Bouchée de homard croustillant</h4>
                             <p>Et sa farandole de petits légumes</p>
                         </div>
                         <div class="plat__prix">
@@ -51,7 +57,7 @@
                     </div>
                     <div class="plat">
                             <div class="plat__description">
-                                <h5>Velouté de cèpes</h5>
+                                <h4>Velouté de cèpes</h4>
                                 <p>Aux truffes</p>
                             </div>
                             <div class="plat__prix">
@@ -63,10 +69,10 @@
                     </div>
                 </div>
                 <div>
-                    <h4>Plats</h4>
+                    <h3 class="carte__contenu__titre">Plats</h3>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Poulet rôti aux herbes de provence</h5>
+                            <h4>Poulet rôti aux herbes de provence</h4>
                             <p>Et sa crème de truffe</p>
                         </div>
                         <div class="plat__prix">
@@ -78,7 +84,7 @@
                     </div>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Langouste rôtie</h5>
+                            <h4>Langouste rôtie</h4>
                             <p>Et ses légumes de saison</p>
                         </div>
                         <div class="plat__prix">35€</div>
@@ -88,7 +94,7 @@
                     </div>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Côte de boeuf angus</h5>
+                            <h4>Côte de boeuf angus</h4>
                             <p>Et sa purée de panais</p>
                         </div>
                         <div class="plat__prix">44€</div>
@@ -98,10 +104,10 @@
                     </div>
                 </div>
                 <div>
-                    <h4>Desserts</h4>
+                    <h3 class="carte__contenu__titre">Desserts</h3>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Farandole de desserts</h5>
+                            <h4>Farandole de desserts</h4>
                             <p>Du chef</p>
                         </div>
                         <div class="plat__prix">
@@ -113,7 +119,7 @@
                     </div>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Crème brulée</h5>
+                            <h4>Crème brulée</h4>
                             <p>Revisitée</p>
                         </div>
                         <div class="plat__prix">
@@ -125,7 +131,7 @@
                     </div>
                     <div class="plat">
                         <div class="plat__description">
-                            <h5>Tiramisu</h5>
+                            <h4>Tiramisu</h4>
                             <p>À la noisette</p>
                         </div>
                         <div class="plat__prix">
@@ -142,7 +148,7 @@
             </div>
         </section>       
         <footer>
-                <h6>ohmyfood</h6>
+                <span class="footer__logo">ohmyfood</span>
                 <ul>
                     <li>
                         <a href="#">

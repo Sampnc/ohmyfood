@@ -1,8 +1,7 @@
 .localisation {
-	@include flex-row(center);
-	align-items: center;
-	background-color: $color-mediumgrey;
-	color: $color-darkgrey;
+	@include flex-box($direction: row, $position: center, $alignement: center);
+	background-color: map-get($color-nuance, mediumgrey);
+	color: map-get($color-nuance, darkgrey);
 	height: 60px;
 	i {
 		margin-right: 20px;
@@ -10,52 +9,51 @@
 }
 
 .explorer {
-	background-color: $color-lightgrey;
+	background-color: map-get($color-nuance, lightgrey);
 	padding: 30px;
-	
 }
 
+
 .tutoriel {
-	padding: 20px 150px;
 	counter-reset: tutoriel_etape;
-	@media (max-width: 1024px) {
-		padding: 20px;
-	}
+	
 	ol {
-		@include flex-row(space-between);
-		flex-wrap: wrap;
+		@include flex-box($direction: column);
 		padding-left: 15px;
-		@include position(relative);
+
+		@include desktop {
+			@include flex-box($direction: row, $position: space-around);
+		}
 	}
 	li {
-		width: 320px;
-		background-color: $color-lightgrey;
+		width: 100%;
+		background-color: map-get($color-nuance, lightgrey);
 		padding: 30px;
+		margin-bottom: 20px;
+		border-radius: 25px;
 		@include position(relative);
-		@include b-radius(25px);
 		@include box-shadow-initial;
-		@media (max-width: 1024px) {
-			width: 100%;
-			margin-bottom: 20px;
+
+		@include desktop {
+			width: calc( ( 100% - 2 * 60px ) / 3 );
 		}
+
 		&::before {
 			content: counter(tutoriel_etape);
 			counter-increment: tutoriel_etape;
 			background-color: $color-primary;
 			color: white;
-			@include flex-row(center);
-			align-items: center;
+			@include flex-box($position: center, $alignement: center);
 			width: 25px;
 			height: 25px;
-			@include b-radius(100%);
+			border-radius: 100%;
 			@include position(absolute, $left: -15px);	
 		}
 		i {
-			color: $color-grey;
-			margin-right: 20px;
+			color: map-get($color-nuance, grey);
+			margin-right: 10px;
 		}
 		&:hover {
-			cursor: pointer;
 			background-color: lighten($color-primary, 35);
 			i {
 				color: $color-primary;
@@ -65,60 +63,56 @@
 }
 
 .restaurants {
-	background-color: $color-lightgrey;
-	padding: 20px 150px 20px 150px;
+	background-color: map-get($color-nuance, lightgrey);
+
 	> div {
-		@include flex-row(space-between);
-		flex-wrap: wrap;
-		@media (max-width: 1024px) {
-			max-width: 1024px;
-			@include flex-column(center);
-			flex-flow: wrap;
+		@include flex-box($direction: column);
+
+		@include desktop {
+			@include flex-box($direction: row, $position: space-between);
+			flex-wrap: wrap;
 		}
-	}
-	@media (max-width: 1024px) {
-		padding: 0 20px 0 20px;
+
 	}
 }
 
-.restaurant {
-	color: inherit;
-	@include b-radius(15px);
+.restaurant {	
+	border-radius: 15px;
 	@include box-shadow-initial;
 	@include position(relative);
 	background-color: white;
 	height: 300px;
-	width: 590px;
+	width: 100%;
 	margin-bottom: 30px;
+
+	@include desktop {
+		width: 45%;
+	}
+
 	&:hover {
 		@include box-shadow-color;
-	}
-	@media (max-width: 1024px) {
-		width: 100%;
 	}
 	&--nouveau::after {
 		content: "Nouveau";
 		background-color: $color-tertiary;
-		color: darken($color-tertiary, 50);
+		color: darken($color-tertiary, 40);
 		@include position(absolute, $top: 20px, $right: 20px,);
-		padding: 5px 10px;
+		padding: 10px;
 	}
 	img {
 		height: 200px;
-		width: 100%;
-		object-fit: cover;
-		@include b-radius(15px 15px 0 0);
+		border-radius: 15px 15px 0 0;
 	}
-
 	&__description {
-		@include b-radius(0 0 15px 15px);
 		padding: 10px;
+		border-radius: 0 0 15px 15px;
 		@include position(relative);
 		h3, p {
 			margin: 10px;
 		}
-		i {
+		.fa-heart {
 			@include position(absolute, $top: 40px, $right: 30px,);
 		}
 	}
+	
 }

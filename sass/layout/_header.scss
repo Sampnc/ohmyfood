@@ -1,17 +1,17 @@
 header {
-	text-align: center;
+	width: 100%;
+	background-color: white;
+	@include flex-box($position: center, $alignement: center);
 	padding: 15px;
-	@include position(relative);
+	@include position(fixed);
+	z-index: 99;
 	@include box-shadow-initial;
-		.retour {
-		
-		@include position(absolute, $top: 25px, $left: 100px);
-		&:hover {
+		.retour {		
+		@include position(absolute, $top: 35%, $left: 30px);
+		:hover {
 			color: $color-primary;
 			transform: scale(1.05);
 		}
 	}
 }
-
-
 

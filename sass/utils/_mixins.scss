@@ -1,13 +1,8 @@
-@mixin flex-row ($justify){
+@mixin flex-box ($direction: null, $position: null, $alignement: null){
 	display: flex;
-	flex-direction: row;
-	justify-content: $justify;
-}
-
-@mixin flex-column($justify){
-	display: flex;
-	flex-direction: column;
-	justify-content: $justify;
+	flex-direction: $direction;
+	justify-content: $position;
+	align-items: $alignement;
 }
 
 @mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
@@ -16,10 +11,6 @@
 	right: $right;
 	left: $left;
 	bottom: $bottom;
-}
-
-@mixin b-radius($radius) {
-	border-radius: $radius;
 }
 
 @mixin box-shadow-initial {

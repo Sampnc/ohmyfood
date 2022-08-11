@@ -1,22 +1,22 @@
 footer {
-	background-color: $color-darkgrey;
+	background-color: map-get($color-nuance, darkgrey);
 	color: white;
-	padding: 20px 100px 20px 100px;
+	padding: 20px 0 20px 20px;
 	ul {
 		padding: 0;
 	}
 	li {
 		margin-top: 10px;
 	}
+	i {
+		margin-right: 5px;		
+	}
 	a:hover {
 		text-decoration: underline;
 	}
-	i {
-		margin-right: 5px;
-		color: white;
-	}
-	@media (max-width: 1024px) {
-		padding: 20px 0 20px 20px;
+	
+	@include desktop {
+		padding-left: 150px;
 	}	
 }
 

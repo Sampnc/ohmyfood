@@ -18,7 +18,7 @@
 }
 @keyframes slide-rev {
   0% {
-    transform: translateX(-50px);
+    transform: translateX(-25px);
   }
   100% {
     transform: translateX(0);
@@ -67,25 +67,14 @@
   }
 }
 *,
-::before,
-::after {
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
-body, h1 {
+body, h1, h2, h3, h4, h5, span, p {
   margin: 0;
-}
-
-h2 {
-  margin-top: 0;
-}
-
-h5 {
-  margin: 10px;
-}
-
-h6 {
-  margin: 0 0 20px 0;
+  line-height: 1;
 }
 
 ol, li {
@@ -100,62 +89,73 @@ a, i {
   color: inherit;
 }
 
-body {
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+h2 {
+  margin: 25px 0;
+}
+
+main > * {
+  padding: 30px 20px;
+}
+@media screen and (min-width: 1024px) {
+  main > * {
+    padding: 30px 150px;
+  }
+}
+
+body, html {
+  margin: 0;
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
 }
 
 h1 {
   font-family: "Shrikhand", cursive;
+  font-weight: 400;
 }
 
 h2 {
-  font-family: "Shrikhand", cursive;
+  font-weight: bold;
   font-size: 18pt;
 }
 
-h3, .button {
-  font-size: 16pt;
-  font-weight: bold;
+.carte__entete__titre {
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+  font-size: 20pt;
 }
 
-h4 {
-  font-weight: 400;
-  font-size: 18px;
+h3 {
+  font-size: 15pt;
+}
+
+.carte__contenu__titre {
+  font-weight: 300;
   text-transform: uppercase;
 }
 
-h4, h6 {
-  font-size: 18px;
-}
-
-h5 {
-  font-size: 16px;
-}
-
-h6 {
-  font-family: "Shrikhand", cursive;
-  font-size: 18px;
-}
-
-span {
-  font-weight: bold;
-}
-
-a {
-  font-weight: 400;
-}
-
-.restaurant--nouveau::after, p, span {
-  font-size: 12pt;
+h4 {
+  font-size: 13pt;
 }
 
 .explorer {
   text-align: center;
 }
 
+p {
+  font-size: 13pt;
+}
+
 .plat__prix {
   font-weight: bold;
+}
+
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 14pt;
 }
 
 .bouton {
@@ -173,6 +173,12 @@ a {
   cursor: pointer;
   opacity: 0.8;
   box-shadow: 6px 6px 13px rgba(0, 0, 0, 0.3);
+}
+
+.commande {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0 50px 0;
 }
 
 .fa-heart {
@@ -211,7 +217,7 @@ a {
   bottom: 0;
   z-index: 1;
   opacity: 0.8;
-  animation: disappear 200ms 3s forwards;
+  animation: disappear 200ms 2.5s forwards;
   transform-origin: top;
 }
 .chargement__cercle {
@@ -231,7 +237,7 @@ a {
   border-bottom-color: #9356DC;
   opacity: 0.9;
   animation: spin linear infinite;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
 }
 .chargement__cercle::before, .chargement__cercle::after {
   content: "";
@@ -248,7 +254,7 @@ a {
   border-bottom-color: #FF79DA;
   opacity: 0.9;
   animation: spin linear infinite;
-  animation-duration: 3s;
+  animation-duration: 2.5s;
 }
 .chargement__cercle::after {
   content: "";
@@ -265,21 +271,26 @@ a {
   border-bottom-color: #99E2D0;
   opacity: 0.9;
   animation: spin linear infinite;
-  animation-duration: 6s;
+  animation-duration: 5s;
 }
 
 header {
-  text-align: center;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 15px;
-  position: relative;
+  position: fixed;
+  z-index: 99;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.13);
 }
 header .retour {
   position: absolute;
-  top: 25px;
-  left: 100px;
+  top: 35%;
+  left: 30px;
 }
-header .retour:hover {
+header .retour :hover {
   color: #9356DC;
   transform: scale(1.05);
 }
@@ -287,7 +298,7 @@ header .retour:hover {
 footer {
   background-color: #353535;
   color: white;
-  padding: 20px 100px 20px 100px;
+  padding: 20px 0 20px 20px;
 }
 footer ul {
   padding: 0;
@@ -295,16 +306,15 @@ footer ul {
 footer li {
   margin-top: 10px;
 }
+footer i {
+  margin-right: 5px;
+}
 footer a:hover {
   text-decoration: underline;
 }
-footer i {
-  margin-right: 5px;
-  color: white;
-}
-@media (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
   footer {
-    padding: 20px 0 20px 20px;
+    padding-left: 150px;
   }
 }
 
@@ -327,34 +337,32 @@ footer i {
 }
 
 .tutoriel {
-  padding: 20px 150px;
   counter-reset: tutoriel_etape;
-}
-@media (max-width: 1024px) {
-  .tutoriel {
-    padding: 20px;
-  }
 }
 .tutoriel ol {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
   padding-left: 15px;
-  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .tutoriel ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 .tutoriel li {
-  width: 320px;
+  width: 100%;
   background-color: #F6F6F6;
   padding: 30px;
-  position: relative;
+  margin-bottom: 20px;
   border-radius: 25px;
+  position: relative;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.13);
 }
-@media (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .tutoriel li {
-    width: 100%;
-    margin-bottom: 20px;
+    width: calc((100% - 120px) / 3);
   }
 }
 .tutoriel li::before {
@@ -363,7 +371,6 @@ footer i {
   background-color: #9356DC;
   color: white;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 25px;
@@ -374,10 +381,9 @@ footer i {
 }
 .tutoriel li i {
   color: #7D7D7D;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .tutoriel li:hover {
-  cursor: pointer;
   background-color: #f2eafb;
 }
 .tutoriel li:hover i {
@@ -386,133 +392,113 @@ footer i {
 
 .restaurants {
   background-color: #F6F6F6;
-  padding: 20px 150px 20px 150px;
 }
 .restaurants > div {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
-@media (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .restaurants > div {
-    max-width: 1024px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-flow: wrap;
-  }
-}
-@media (max-width: 1024px) {
-  .restaurants {
-    padding: 0 20px 0 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
 .restaurant {
-  color: inherit;
   border-radius: 15px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.13);
   position: relative;
   background-color: white;
   height: 300px;
-  width: 590px;
+  width: 100%;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant {
+    width: 45%;
+  }
 }
 .restaurant:hover {
   box-shadow: 0px 0px 16px rgba(147, 86, 220, 0.6);
 }
-@media (max-width: 1024px) {
-  .restaurant {
-    width: 100%;
-  }
-}
 .restaurant--nouveau::after {
   content: "Nouveau";
   background-color: #99E2D0;
-  color: #1b6150;
+  color: #278870;
   position: absolute;
   top: 20px;
   right: 20px;
-  padding: 5px 10px;
+  padding: 10px;
 }
 .restaurant img {
   height: 200px;
-  width: 100%;
-  object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
 .restaurant__description {
-  border-radius: 0 0 15px 15px;
   padding: 10px;
+  border-radius: 0 0 15px 15px;
   position: relative;
 }
 .restaurant__description h3, .restaurant__description p {
   margin: 10px;
 }
-.restaurant__description i {
+.restaurant__description .fa-heart {
   position: absolute;
   top: 40px;
   right: 30px;
 }
 
 .banniere {
-  height: 400px;
+  height: 500px;
 }
 .banniere img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
+  height: 500px;
 }
 
 .carte {
   background-color: #F6F6F6;
-  border-radius: 25px;
   position: relative;
   top: -80px;
-  margin: 0 80px -80px 80px;
+  margin: 0 0 -80px 0;
+  border-radius: 25px;
 }
-@media (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .carte {
-    margin: 0 0 -80px 0;
+    margin: 0 150px -80px 150px;
   }
 }
 .carte__entete {
+  position: relative;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
 }
 .carte__contenu {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  padding: 0 20px 0 20px;
+  padding: 0 20px;
 }
-@media (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .carte__contenu {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+  }
+  .carte__contenu > * {
+    width: 30%;
   }
 }
-.carte__contenu > div {
-  width: 400px;
-}
-@media (max-width: 1024px) {
-  .carte__contenu > div {
-    width: 100%;
-  }
-}
-.carte__contenu h4 {
-  color: #7D7D7D;
+.carte__contenu__titre {
   padding-bottom: 10px;
-  margin: 5px 0 5px 0;
+  margin: 30px 0 20px;
   position: relative;
 }
-.carte__contenu h4::after {
+.carte__contenu__titre::after {
   content: "";
   width: 50px;
   height: 3px;
@@ -523,15 +509,14 @@ footer i {
 }
 
 .plat {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   width: 100%;
-  position: relative;
   background-color: white;
-  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.13);
-  margin: 15px 0 15px 0;
+  border-radius: 15px;
+  margin: 15px 0;
   overflow: hidden;
   animation: slide-top 1s, fade-in 1s ease 0s 1 both;
   animation-fill-mode: both;
@@ -551,56 +536,51 @@ footer i {
 .plat:nth-child(5) {
   animation-delay: 1500ms;
 }
+@media screen and (min-width: 1024px) {
+  .plat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
 .plat__description {
   width: calc(100% - 30px - 30px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 15px;
-  margin: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
-.plat__description h5 {
-  margin-bottom: 5px;
-  margin: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.plat__description p {
+.plat__description > h4 + p {
   margin: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .plat__prix {
-  width: 35px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   position: absolute;
   right: 0;
+  width: 35px;
   margin: auto;
   padding-bottom: 15px;
   height: 100%;
-  animation-name: slide-rev 1s;
+  animation: slide-rev 1s;
 }
 .plat__confirme {
-  color: white;
-  background-color: #99E2D0;
-  position: absolute;
-  left: calc(100% + 1px);
-  width: 50px;
-  height: 100%;
-  padding: 0 10px 0 10px;
-  border-radius: 0 10px 10px 0;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  animation-name: slide-rev 1s;
+  position: absolute;
+  left: calc(100% + 1px);
+  border-radius: 0 10px 10px 0;
+  color: white;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 100%;
+  padding: 0 10px;
+  animation: slide-rev 1s;
 }
 .plat__confirme i {
   animation: rotation-rev 1s;
@@ -624,11 +604,4 @@ footer i {
 .plat:hover .plat__confirme i {
   animation: rotation 1s;
   animation-fill-mode: forwards;
-}
-
-.commande {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 50px 0 50px 0;
 }

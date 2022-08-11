@@ -1,42 +1,37 @@
 .banniere {
-	height: 400px;
+	height: 500px;
 	img {
-		width: 100%;
-		height: 400px;
-		object-fit: cover;
+		height: 500px;
 	}
 }
 
 .carte{
-	background-color: $color-lightgrey;
-	@include b-radius(25px);
+	background-color: map-get($color-nuance, lightgrey);
 	@include position(relative, $top: -80px);
-	margin: 0 80px -80px 80px;
-	@media (max-width: 1024px) {
-		margin: 0 0 -80px 0;
+	margin: 0 0 -80px 0;
+	border-radius: 25px;
+	@include desktop {
+		margin: 0 150px -80px 150px;
 	}
 	&__entete {
-		@include flex-row(space-between);
-		align-items: center;
 		@include position(relative);
-		padding: 20px;
+		@include flex-box($position: space-between, $alignement: center);
+		padding: 20px 20px 0 20px;
 	}
 	&__contenu {
-		@include flex-row(space-between);
-		padding: 0 20px 0 20px;
-		@media (max-width: 1024px) {
-			@include flex-column(center);
-		}
-		> div {
-			width: 400px;
-			@media (max-width: 1024px) {
-				width: 100%;
+		@include flex-box($direction: column, $position: space-between);
+		padding: 0 20px;
+		@include desktop {
+			@include flex-box($direction: row, $position: space-around);
+			padding: 0;
+			> * {
+				width: 30%;
 			}
 		}
-		h4 {			
-			color: $color-grey;
+
+		&__titre {			
 			padding-bottom: 10px;
-			margin: 5px 0 5px 0;
+			margin: 30px 0 20px;
 			@include position(relative);
 			&::after {
 			    content: "";
@@ -50,55 +45,52 @@
 }
 
 .plat {
-	@include flex-row(space-between);
 	width: 100%;
-	@include position(relative);
 	background-color: white;
-	@include b-radius(15px);
+	@include flex-box($position: space-between);
+	@include position(relative);
 	@include box-shadow-initial;
-	margin: 15px 0 15px 0;	
+	border-radius: 15px;
+	margin: 15px 0;	
 	overflow: hidden;
 	@for $i from 1 through 5 {
 		&:nth-child(#{$i}) {
 			animation-delay: 300ms * $i;
 		}
-	}	
+	}
 	animation: slide-top 1s, fade-in 1s ease 0s 1 both;
 	animation-fill-mode: both;
+	@include desktop {
+		@include flex-box($direction: column, $position: space-between);
+	}
 	&__description {
 		width: calc(100% - 30px - 30px);
-		@include flex-column(space-between);
+		@include flex-box($direction: column, $position: space-between);
 		padding: 15px;
-		@include overflow-hidden;
-		h5 {
-			margin-bottom: 5px;
-			@include overflow-hidden;
-		}
-		p {
+		> h4 + p {
 			@include overflow-hidden;
 		}
 	}
 	&__prix {
-		width: 35px;
-		@include flex-column(flex-end);
+		@include flex-box($direction: column, $position: flex-end);
 		@include position(absolute, $right: 0);
+		width: 35px;
    		margin: auto;
    		padding-bottom: 15px;
     	height: calc(100%);
-    	animation-name: slide-rev 1s;
-	}
-	&__confirme {
+    	animation: slide-rev 1s;
+    }
+    &__confirme {
+		@include flex-box($position: center, $alignement: center);
+		@include position(absolute, $left: calc(100% + 1px));
+		border-radius: 0 10px 10px 0;
 		color: white;
 		background-color: $color-tertiary;
-		@include position(absolute, $left: calc(100% + 1px));
 		width: 50px;
 		height: 100%;
-		padding: 0 10px 0 10px;
-		@include b-radius(0 10px 10px 0);
-		@include flex-row(center);
-		align-items: center;
-    	animation-name: slide-rev 1s;
-    	i {
+		padding: 0 10px;		
+    	animation: slide-rev 1s;
+		i {
     		animation: rotation-rev 1s;			
     	} 	
 	}
@@ -123,9 +115,3 @@
 		}
 	}
 }
-
-.commande{
-	@include flex-row(center);
-	padding: 50px 0 50px 0;
-}
-

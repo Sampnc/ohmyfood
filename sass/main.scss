@@ -1,20 +1,17 @@
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./utils/animations";
-@import "./utils/extensions";
+@import "./utils/keyframes";
+@import "./utils/breakpoints";
 
 @import "./base/base";
 @import "./base/typography"; 
 
 @import "./components/button";
-@import "./components/coeur-animation";
+@import "./components/coeur";
 @import "./components/loader";
 
 
 @import "./layout/header";
-@import "./layout/nav";
-@import "./layout/container";
-@import "./layout/form";
 @import "./layout/footer";
 
 
