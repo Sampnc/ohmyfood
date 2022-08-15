@@ -280,12 +280,14 @@ p, span {
 }
 
 header {
+  z-index: 999;
+  position: sticky;
+  top: 0px;
   width: 100%;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   padding: 15px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.13);
 }
@@ -458,10 +460,10 @@ footer a:hover {
 }
 
 .banniere {
-  height: 500px;
+  height: 400px;
 }
 .banniere img {
-  height: 500px;
+  height: 400px;
 }
 
 .carte {

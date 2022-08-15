@@ -1,7 +1,7 @@
 .banniere {
-	height: 500px;
+	height: 400px;
 	img {
-		height: 500px;
+		height: 400px;
 	}
 }
 
@@ -68,7 +68,7 @@
 	@include desktop {
 		@include flex-box($direction: column, $position: space-between);
 	}
-	
+
 	&__description {
 		width: calc(100% - 30px - 30px);
 		@include flex-box($direction: column, $position: space-between);
