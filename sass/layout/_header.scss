@@ -2,10 +2,12 @@ header {
 	width: 100%;
 	background-color: white;
 	@include flex-box($position: center, $alignement: center);
+	@include position(relative);
 	padding: 15px;
-	@include position(fixed);
-	z-index: 99;
 	@include box-shadow-initial;
+	h1 {
+		position: relative;
+	}
 		.retour {		
 		@include position(absolute, $top: 35%, $left: 30px);
 		:hover {

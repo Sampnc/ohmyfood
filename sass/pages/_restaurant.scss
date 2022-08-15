@@ -10,9 +10,11 @@
 	@include position(relative, $top: -80px);
 	margin: 0 0 -80px 0;
 	border-radius: 25px;
+
 	@include desktop {
 		margin: 0 150px -80px 150px;
 	}
+
 	&__entete {
 		@include position(relative);
 		@include flex-box($position: space-between, $alignement: center);
@@ -21,6 +23,7 @@
 	&__contenu {
 		@include flex-box($direction: column, $position: space-between);
 		padding: 0 20px;
+
 		@include desktop {
 			@include flex-box($direction: row, $position: space-around);
 			padding: 0;
@@ -53,6 +56,7 @@
 	border-radius: 15px;
 	margin: 15px 0;	
 	overflow: hidden;
+
 	@for $i from 1 through 5 {
 		&:nth-child(#{$i}) {
 			animation-delay: 300ms * $i;
@@ -60,9 +64,11 @@
 	}
 	animation: slide-top 1s, fade-in 1s ease 0s 1 both;
 	animation-fill-mode: both;
+
 	@include desktop {
 		@include flex-box($direction: column, $position: space-between);
 	}
+	
 	&__description {
 		width: calc(100% - 30px - 30px);
 		@include flex-box($direction: column, $position: space-between);

@@ -18,7 +18,7 @@
 }
 @keyframes slide-rev {
   0% {
-    transform: translateX(-25px);
+    transform: translateX(-50px);
   }
   100% {
     transform: translateX(0);
@@ -112,6 +112,11 @@ body, html {
   font-family: "Roboto", sans-serif;
 }
 
+button {
+  font-weight: bold;
+  font-size: 13pt;
+}
+
 h1 {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
@@ -145,7 +150,7 @@ h4 {
   text-align: center;
 }
 
-p {
+p, span {
   font-size: 13pt;
 }
 
@@ -163,7 +168,7 @@ p {
   border: 0;
   color: white;
   height: 45px;
-  width: 230px;
+  width: 240px;
   border-radius: 100px;
   margin: 30px 0 0 0;
   transition-duration: 0.25s;
@@ -178,7 +183,7 @@ p {
 .commande {
   display: flex;
   justify-content: center;
-  padding: 50px 0 50px 0;
+  padding: 50px 0;
 }
 
 .fa-heart {
@@ -280,10 +285,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   padding: 15px;
-  position: fixed;
-  z-index: 99;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.13);
+}
+header h1 {
+  position: relative;
 }
 header .retour {
   position: absolute;
@@ -323,9 +330,9 @@ footer a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 20px;
   background-color: #EAEAEA;
   color: #353535;
-  height: 60px;
 }
 .localisation i {
   margin-right: 20px;
@@ -333,7 +340,7 @@ footer a:hover {
 
 .explorer {
   background-color: #F6F6F6;
-  padding: 30px;
+  padding-bottom: 60px;
 }
 
 .tutoriel {

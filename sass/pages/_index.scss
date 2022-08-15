@@ -1,8 +1,8 @@
 .localisation {
 	@include flex-box($direction: row, $position: center, $alignement: center);
+	padding: 20px;
 	background-color: map-get($color-nuance, mediumgrey);
 	color: map-get($color-nuance, darkgrey);
-	height: 60px;
 	i {
 		margin-right: 20px;
 	}
@@ -10,13 +10,11 @@
 
 .explorer {
 	background-color: map-get($color-nuance, lightgrey);
-	padding: 30px;
+	padding-bottom: 60px;
 }
 
-
 .tutoriel {
-	counter-reset: tutoriel_etape;
-	
+	counter-reset: tutoriel_etape;	
 	ol {
 		@include flex-box($direction: column);
 		padding-left: 15px;
@@ -64,7 +62,6 @@
 
 .restaurants {
 	background-color: map-get($color-nuance, lightgrey);
-
 	> div {
 		@include flex-box($direction: column);
 
@@ -72,7 +69,6 @@
 			@include flex-box($direction: row, $position: space-between);
 			flex-wrap: wrap;
 		}
-
 	}
 }
 
@@ -113,6 +109,5 @@
 		.fa-heart {
 			@include position(absolute, $top: 40px, $right: 30px,);
 		}
-	}
-	
+	}	
 }

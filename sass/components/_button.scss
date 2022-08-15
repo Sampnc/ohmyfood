@@ -3,7 +3,7 @@
 	border: 0;
 	color: white;
 	height: 45px;
-	width: 230px;
+	width: 240px;
 	border-radius: 100px;
 	margin: 30px 0 0 0;
 	transition-duration: .25s;
@@ -17,5 +17,5 @@
 
 .commande{
 	@include flex-box($position: center);
-	padding: 50px 0 50px 0;
+	padding: 50px 0;
 }
